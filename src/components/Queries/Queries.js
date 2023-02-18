@@ -15,17 +15,11 @@ const styles = {
 }
 
 
-const genderOption = [
-{},
-];
-const InquiryOption = [
-    {}
-];
+const genderOption = [{}];
+const InquiryOption = [{}];
 
 
-const filterOptions = createFilterOptions({
-    genderOption
-});
+const filterOptions = createFilterOptions({genderOption});
 const Queries = () => {
     const { setOpenSnack} = useContext(AuthContext)
     return (
@@ -74,23 +68,22 @@ const Queries = () => {
                         </Box>
                     </Box>
 
-                    <Box sx={{ display: "flex", flexDirection: { xs: 'column', md: 'row' } }} justifyContent="center"  >
+                    <Box sx={{ display: "flex", flexDirection: { xs: 'column', md:'row'}}} justifyContent="center">
 
-                        <Box sx={{ width: { xs: '100%', md: '49%' }, textAlign: { xs: "center", md: "end" } }}>
+                        <Box sx={{ width:{xs: '100%', md: '49%' }, textAlign: { xs: "center", md: "end" }}}>
 
                             <Autocomplete
                                 options={genderOption}
                                 getOptionLabel={(option) => option.title}
                                 filterOptions={filterOptions}
                                 renderInput={(params) => <TextField {...params} label="Country"
-                                    fullWidth="true"
-                                    variant="filled" />}
+                                fullWidth="true"
+                                variant="filled" />}
                             />
                         </Box>
                         <Box sx={{ width: { xs: '100%', md: '49%' }, textAlign: { xs: "center", md: "start" } }}>
 
                             <TextField
-
                                 select
                                 label="phone number(optional)"
                                 variant="filled"
@@ -101,9 +94,6 @@ const Queries = () => {
                             >
                                 <option >+1</option>
                             </TextField>
-
-
-
                         </Box>
                     </Box>
 
@@ -111,17 +101,15 @@ const Queries = () => {
                         <Box sx={{ width: "100%" }}>
                             <Autocomplete
                                 options={InquiryOption}
-
                                 getOptionLabel={(option) => option.title}
                                 filterOptions={filterOptions}
                                 renderInput={(params) => <TextField {...params} label="Inquiry type"
-                                    fullWidth="true" variant="filled" />}
+                                fullWidth="true" variant="filled" />}
                             />
                         </Box>
                     </Box>
 
                     <TextField
-
                         label="Message"
                         fullWidth="true"
                         variant="filled"

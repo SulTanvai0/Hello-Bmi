@@ -10,9 +10,6 @@ const AuthProvider = ({ children }) => {
 
     const [bmi, setBmi] = useState(0);
 
-
-
-
     const authInfo = { openModal, setOpenModal, MediaModal, setMediaModal, bmi, setBmi, openSnack, setOpenSnack }
     return (
         <AuthContext.Provider value={authInfo}>
